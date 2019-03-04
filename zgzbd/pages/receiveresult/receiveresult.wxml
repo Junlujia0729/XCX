@@ -1,0 +1,19 @@
+<!--pages/receiveresult.wxml-->
+
+<view class='container' style="height: {{clientHeight ?clientHeight+'px':'auto'}}">
+  <view class='contnet'>
+    <image src='http://imgs.52jiaoshi.com/1543470414.png' mode='widthFix'></image>
+    <view class='t-success'>{{tip1}}</view>
+    <view class='tip-title'>查询方式</view>
+    <view class='tip1'>
+        {{tip2}}
+    </view> 
+    <view class='guide'>
+      {{tip3}}
+    </view>
+    <button open-type='share' class='share'>
+      分享
+    </button>
+  </view>
+  <image src='http://imgs.52jiaoshi.com/1543472586.png' class='logo'></image>
+</view>

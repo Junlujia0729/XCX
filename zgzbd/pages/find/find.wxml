@@ -1,0 +1,77 @@
+<view class="container">
+  <view class="swiper-tab">
+    <view class="swiper-tab-item {{currentTab== index ?'active':''}}"
+    data-current="{{index}}" bindtap="clickTab" wx:for="{{tab_items}}" wx:for-item="item" wx:key="index" data-id="{{item.id}}" data-sign="{{item.sign}}">{{item.name}}</view>
+  </view>
+  <swiper current="{{currentTab}}" duration="300" 
+  bindchange="swiperTab" style="height: {{clientHeight ?clientHeight+'px':'auto'}}">
+    <swiper-item >
+      <scroll-view style="height: {{clientHeight ?clientHeight+'px':'auto'}}" scroll-y="{{true}}">
+        <view class='article-item' bindtap='Todetail' wx:for="{{articledata2}}" wx:for-item="item" wx:key="index" data-id="{{item.id}}">
+          <view class='title'>{{item.title}}</view>
+          <view class='lables'>
+            <view class='left'> 
+              <text class='creatdate'>{{item.createtime}}</text>
+              <text>我爱教师网</text>
+            </view>
+            <view class='right'>
+              <text class='read-num'>{{item.views}}</text>
+              <!-- <text >666人评论</text> -->
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item >
+      <scroll-view style="height: {{clientHeight ?clientHeight+'px':'auto'}}" scroll-y="{{true}}">
+        <view class='article-item' bindtap='Todetail' wx:for="{{articledata3}}" wx:for-item="item" wx:key="index" data-id="{{item.id}}">
+          <view class='title'>{{item.title}}</view>
+          <view class='lables'>
+            <view class='left'> 
+              <text class='creatdate'>{{item.createtime}}</text>
+              <text>我爱教师网</text>
+            </view>
+            <view class='right'>
+              <text class='read-num'>{{item.views}}</text>
+              <!-- <text >666人评论</text> -->
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+  </swiper-item>
+  <swiper-item >
+    <scroll-view style="height: {{clientHeight ?clientHeight+'px':'auto'}}" scroll-y="{{true}}">
+      <view class='article-item' bindtap='Todetail' wx:for="{{articledata4}}" wx:for-item="item" wx:key="index" data-id="{{item.id}}">
+        <view class='title'>{{item.title}}</view>
+        <view class='lables'>
+          <view class='left'> 
+            <text class='creatdate'>{{item.createtime}}</text>
+            <text>我爱教师网</text>
+          </view>
+          <view class='right'>
+            <text class='read-num'>{{item.views}}</text>
+            <!-- <text >666人评论</text> -->
+          </view>
+        </view>
+      </view>
+    </scroll-view>  
+  </swiper-item>
+  <swiper-item >
+    <scroll-view style="height: {{clientHeight ?clientHeight+'px':'auto'}}" scroll-y="{{true}}">
+      <view class='article-item' bindtap='Todetail' wx:for="{{articledata5}}" wx:for-item="item" wx:key="index" data-id="{{item.id}}">
+        <view class='title'>{{item.title}}</view>
+        <view class='lables'>
+          <view class='left'> 
+            <text class='creatdate'>{{item.createtime}}</text>
+            <text>我爱教师网</text>
+          </view>
+          <view class='right'>
+            <text class='read-num'>{{item.views}}</text>
+            <!-- <text >666人评论</text> -->
+          </view>
+        </view>
+      </view>
+    </scroll-view>  
+  </swiper-item>
+  </swiper>
+</view>

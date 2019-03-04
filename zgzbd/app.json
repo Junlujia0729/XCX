@@ -1,0 +1,74 @@
+{
+  "pages": [
+    
+    "pages/home/home",
+    "pages/yuyue/yuyue",
+    "pages/draw/draw",
+    "pages/detail/detail",
+    "pages/favdetailsnew/favdetailsnew",
+    "pages/recite/recite",
+    "pages/receiveresult/receiveresult",
+    "pages/classx/classx",
+    "pages/guide/guide",
+    "pages/getphone/getphone",
+    "pages/getuserinfo/getuserinfo",
+    "pages/find/find",
+    "pages/ranking/ranking",
+    "pages/articledetail/articledetail",
+    "pages/addcomment/addcomment",
+    "pages/order/order",
+    "pages/addresslist/addresslist",
+    "pages/payresult/payresult",
+    "pages/activity/activity",
+    "pages/selectarea/selectarea",
+    "pages/videolist/videolist",
+    "pages/videoplay/videoplay",
+    "pages/queryscore/queryscore",
+    "pages/queryscoreresult/queryscoreresult",
+    "pages/interviewlist/interviewlist",
+    "pages/interviewdetail/interviewdetail",
+    "pages/interview/interview",
+    "pages/interviewscoring/interviewscoring",
+    "pages/identity/identity",
+    "pages/friendlist/friendlist"
+    
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "教师资格证考试宝典",
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#3eccb3",
+    "borderStyle": "white",
+    "backgroundColor": "#fbfbfb",
+    "list": [
+      {
+        "text": "背题",
+        "pagePath": "pages/home/home",
+        "iconPath": "images/zgzbd/tab_home_gray.png",
+        "selectedIconPath": "images/zgzbd/tab_home_green.png"
+      },
+      {
+        "text": "发现",
+        "pagePath": "pages/find/find",
+        "iconPath": "images/zgzbd/tab_find_gray.png",
+        "selectedIconPath": "images/zgzbd/tab_find_green.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx7f59dbaf1f4ed115",
+    "wx8ea8d7bff99dccfc"
+  ]
+}

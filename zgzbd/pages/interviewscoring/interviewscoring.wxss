@@ -1,0 +1,66 @@
+/* pages/interviewscoring/interviewscoring.wxss */
+.container{padding: 0 20rpx;}
+.score_box{position: relative;}
+.score_box .score_title{
+  height: 70rpx;
+  line-height: 70rpx;
+  background: #3eccb3;
+  display: flex;
+}
+.score_box .score_title text{
+  display: inline-block;
+  text-align: center;
+  font-size: 32rpx;
+  color: #fff;
+  flex:1;
+}
+.score_box .score_item1{
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #f9f9f9;
+  display: flex;
+}
+.score_box .score_item1 text,.score_box .score_item2 text{
+  text-align: center;
+  color: #333;
+  font-size: 28rpx;
+  flex:1;
+}
+.score_box .score_item1 input,.score_box .score_item2 input{
+  flex:1;
+  font-size: 24rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+.score_box .score_item2{
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #eee;
+  display: flex;
+}
+.score_box .left-line{
+  height: 100%;
+  width: 2px;
+  background: #fff;
+  position: absolute;
+  top:0;
+  left:33%;
+  margin-left: -1px;
+}
+.score_box .right-line{
+  height: 100%;
+  width: 2px;
+  background: #fff;
+  position: absolute;
+  top:0;
+  right:33%;
+  margin-left: -1px;
+}
+.title{
+  font-size: 32rpx;
+  text-align: center;
+  padding: 30rpx 0;
+  color: #3eccb3;
+}
+.btn{width: 400rpx;height: 84rpx;background: #3eccb3;color: #fff;text-align: center;line-height: 84rpx;border-radius: 84rpx;margin: 50rpx auto 0;font-size: 34rpx;}

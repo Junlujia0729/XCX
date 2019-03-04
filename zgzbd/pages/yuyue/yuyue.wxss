@@ -1,0 +1,279 @@
+/* pages/yuyue/yuyue.wxss */
+page{
+  background: #f3f4f5;
+}
+.query_box{
+  background: #fff;
+  padding:24rpx;
+  margin-bottom: 20rpx;
+}
+.line {
+  width: 2rpx;
+  height: 100%;
+  background-color: #ddd;
+}
+
+.userinfo{
+  padding-left:30rpx; 
+  position: relative;
+}
+.userinfo .getphone{
+  position: absolute;
+  right:12rpx;
+  top:20rpx;
+  width:200rpx;
+  height:60rpx;
+  line-height: 60rpx;
+  font-size:30rpx;
+}
+.userinfo .nickname{
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #666;
+  font-size: 30rpx;
+  border-bottom: 1px solid #ddd;
+}
+.userinfo .nickname:last-child{
+   border-bottom: none;
+}
+.userinfo input{
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20rpx;
+  width: 70%;
+}
+.area{
+  position: relative;
+}
+.area image{
+  position: absolute;
+  right:100rpx;
+  top:10rpx;
+  width: 200rpx;
+  height: 80rpx;
+}
+.area .refresh{
+  position: absolute;
+  right:25rpx;
+  top:25rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.refresh image{
+  position: absolute;
+  right:0;
+  top:0;
+  width: 50rpx;
+  height: 50rpx;
+}
+.area #yzm{
+  width: 70%;
+}
+.address{
+  display: inline-block;
+  padding-left: 30rpx;
+}
+
+textarea{
+  font-size: 28rpx;
+  padding: 20rpx 20rpx 20rpx 0;
+  color: #666;
+  width: 95%;
+  margin-right:20rpx;
+  display: block;
+  padding-right:20rpx; 
+}
+.footer{
+  margin-top: 34rpx;
+  background: #ff6b49;
+  width: 690rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 36rpx;
+  border-radius: 10rpx;
+}
+.tips{
+  color:#fc645f;
+  font-size:30rpx;
+  margin-top:20rpx;
+  text-align: center;
+}
+.explain{
+  width: 560rpx;
+  height: 211rpx;
+  margin:12rpx auto;
+  background: url(http://imgs.52jiaoshi.com/1512390540.png) no-repeat;
+  background-size:100% 100%; 
+  position: relative;
+  padding: 48rpx 0 0 41rpx;
+}
+.explain-tit{
+  position: absolute;
+  left: 0;
+  top:-20rpx;
+  text-align: center;
+  color: #3eccb3;  
+  width: 100%;
+  font-size: 30rpx;
+}
+.explain-info{
+  font-size: 26rpx;
+  color: #666;
+  line-height: 24rpx;
+  padding-bottom: 22rpx;
+}
+.title{
+  height: 60rpx;
+  width: 100%;
+  background: #f3f4f5;
+  color: #3eccb3;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 34rpx;
+}
+.title .word{
+  display: inline-block;
+  margin: 0 14rpx;
+}
+.title .line{
+  display: inline-block;
+  width: 60rpx;
+  height: 1px;
+  vertical-align: middle;
+  background: #3eccb3;
+}
+.userinfo .box{
+  display: inline-block;
+  width: 10rpx;
+  height: 10rpx;
+  background: #3eccb3;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+#zjhm{
+  width: 75%;
+}
+.name{
+  display: inline-block;
+  width: 140rpx;
+  text-align:justify;
+}
+:-ms-input-placeholder{
+  color: #f5f5f5;
+}
+::-webkit-input-placeholder{
+  color: #f5f5f5;
+}
+.Logo{
+  width: 318rpx;
+  height: 40rpx;
+  margin: 50rpx auto;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.Logo image{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
+
+
+.content-pop{
+    position: fixed;
+    width: 580rpx;
+    height: 620rpx;
+    left:50%;
+    top:50%;
+    margin-left: -290rpx;
+    margin-top: -410rpx;
+    z-index: 9999;
+    /* display: none; */
+}
+.father{position: absolute;left:0;width: 580rpx;height: 760rpx;background: #fff;z-index: 9999;}
+.father .ninhao{
+    position: absolute;
+    font-size:16px;
+    color:#fff;
+    top:40rpx;
+    left:130rpx;
+    z-index:9999;
+}
+.father ul li{font-size: 24rpx;line-height: 40rpx;color: #333;}
+
+.error{font-size: 24rpx;color: #3eccb3;padding: 20rpx 0 20rpx 55rpx;display: none;}
+
+/*输入手机号  */
+.fix_mask{
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.father {
+  position: absolute;
+  left: 0;
+  width: 580rpx;
+  height: 660rpx;
+  background: #fff3e8;
+  z-index: 9999;
+}
+.close {
+    position: absolute;
+    width: 50rpx;
+    height: 50rpx;
+    right:-5rpx;
+    top:-65rpx;
+    z-index: 1001;  
+}
+.hide{
+ display: none;
+}
+.show{
+ display: block;
+}
+.footer-pop{
+  background: #3eccb3;
+  display: block;
+  margin: 40rpx auto 0;
+  width: 400rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 34rpx;
+  border-radius: 10rpx;
+}
+
+.cp_title{
+  font-size:50rpx;
+  text-align: center;
+  padding:50rpx;
+}
+.cp_tip{
+  font-size:30rpx;
+  text-align: center;
+  padding:10rpx 0 40rpx 0;
+  color:#cccccc;
+}
+.cp_btn{
+  width:85%;
+}
+.cp_input{
+  vertical-align: middle;
+  margin: 30rpx auto;
+  width:84%;
+  font-size:32rpx;
+  border: 1px solid #cccccc;
+  border-radius: 10rpx;
+  padding:10rpx 4rpx;
+}

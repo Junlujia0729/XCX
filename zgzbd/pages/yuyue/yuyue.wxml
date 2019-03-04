@@ -1,0 +1,48 @@
+<!--pages/yuyue/yuyue.wxml-->
+<!--弹窗  -->
+<view class="fix_mask" wx:if="{{mask}}"></view>
+<view class="content-pop" wx:if="{{mask}}">
+    <view class="father">
+      <form bindsubmit="queryScore22" report-submit="true">
+        <view class="cp_title">请输入验证码</view>
+        <view class="cp_tip">已发送至手机{{mobile}}</view>
+        <input class="cp_input" placeholder="请输入验证码" id="captcha" value='' type="number"  name="captcha"/>
+        <button class="cp_btn" type='primary' formType="submit">
+          立即预约
+        </button>
+      </form>
+    </view>
+    <image src='http://imgs.52jiaoshi.com/zhjs/btn_close.png' class='close' bindtap='cancle'></image>
+</view>
+
+<view class="container">
+  <image wx:if="{{img != ''}}" mode='widthFix' src="{{img}}" style="width:100%;margin-bottom:10px;"></image>
+
+  <form bindsubmit="queryScore" report-submit="true">
+    <view class="query_box userinfo">
+      <view class='nickname area'>
+        <text class='name'>手机号</text>
+        <input placeholder="请输入手机号" type="number" id="mobile" value='{{mobile}}'  name="mobile"/>
+        <!-- <button wx:if="{{!isbind && !isinit}}" class="getphone" open-type="getPhoneNumber" bindgetphonenumber="onGetPhoneNum">一键获取</button>
+        <button wx:if="{{isinit}}" class="getphone" bindtap='showinitphone'>一键获取</button> -->
+      </view>
+    </view>
+    <view class="query_box">
+      <button type="primary" formType="submit">
+        立即预约
+      </button>
+    </view>
+  </form>
+
+
+  <view class='query_box'>
+    <view class='explain'>
+      <view class='explain-tit'>预约说明</view>
+      <view class='explain-info' wx:for="{{desc}}" wx:key="key" wx:for-item="item" wx:for-index="index">{{index+1}}.{{item[index+1]}}</view>
+    </view>
+  </view>
+
+  <view class='Logo'>
+    <image src='../../images/52logo.png' mode="aspectFit"></image>
+  </view>
+</view>

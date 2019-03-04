@@ -1,0 +1,74 @@
+/* pages/receiveresult.wxss */
+page{
+  background: #fff;
+}
+
+/* 预约成功 */
+.container{
+  position: relative;
+  height: 100%;
+  background:url('http://imgs.52jiaoshi.com/1543470313.png') repeat-x;
+  padding: 100rpx 50rpx 0;
+}
+.contnet{
+  background: #fff;
+  padding: 40rpx 50rpx 70rpx;
+  border-radius: 15rpx;
+}
+.contnet image{
+  display: block;
+  width: 231rpx;
+  height: 252rpx;
+  margin: 0 auto;
+}
+.t-success{
+  font-size: 30rpx;
+  line-height: 45rpx;
+  color: #666;
+  margin-top: 28rpx;
+}
+.tip-title{
+  padding: 70rpx 0 25rpx;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: 3333;
+  font-weight: bold;
+  text-align: center;
+}
+.share{
+  border: none;
+  width: 180rpx;
+  border-radius:70rpx;
+  margin: 40rpx auto 0; 
+  background: #f14848;
+  color: #fff;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 26rpx;
+  font-weight: bold;
+}
+.share::after{
+  border:none;
+}
+
+.tip1{
+  color: #999;
+  font-size: 26rpx;
+  line-height: 46rpx;
+}
+.guide{
+  color: #ef8241;
+  font-size: 26rpx;
+  line-height: 46rpx;
+  padding-top: 20rpx;
+}
+.logo{
+  width: 626rpx;
+  height: 37rpx;
+  display: block;
+  position: absolute;
+  bottom: 50rpx;
+  left:50%;
+  margin-left: -313rpx;
+}

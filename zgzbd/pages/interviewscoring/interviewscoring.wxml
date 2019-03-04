@@ -1,0 +1,58 @@
+<!--pages/interviewscoring/interviewscoring.wxml-->
+<view class='title'>
+  评分
+</view>
+<view class='container'>     
+<form bindsubmit="formSubmit" bindreset="formReset">                    
+  <view class='score_box'>
+      <view class='score_title'>
+        <text>评分项目</text>
+        <text>权重系数</text>
+        <text>分数</text>
+      </view>    
+      <view class='score_item1'>
+        <text>职业认知</text>
+        <text>1</text>
+        <input type='number' name="score1" placeholder='请打分' ></input>
+      </view> 
+      <view class='score_item2'>
+        <text>心理素质</text>
+        <text>1</text>
+        <input type='number' name="score2" placeholder='请打分'></input>
+      </view>
+      <view class='score_item1'>
+        <text>仪表仪态</text>
+        <text>1</text>
+        <input type='number' name="score3" placeholder='请打分'></input>
+      </view> 
+      <view class='score_item2'>
+        <text>交流沟通</text>
+        <text>1.5</text>
+        <input type='number' name="score4" placeholder='请打分'></input>
+      </view>
+      <view class='score_item1'>
+        <text>思维品质</text>
+        <text>1.5</text>
+        <input type='number' name="score5" placeholder='请打分'></input>
+      </view>
+      <view class='score_item2'>
+        <text>了解幼儿</text>
+        <text>1</text>
+        <input type='number' name="score6" placeholder='请打分'></input>
+      </view> 
+      <view class='score_item1'>
+        <text>技术技巧</text>
+        <text>2</text>
+        <input type='number' name="score7" placeholder='请打分'></input>
+      </view>
+      <view class='score_item2'>
+        <text>评价与反思</text>
+        <text>1</text>
+        <input type='number' name="score8" placeholder='请打分'></input>
+      </view>
+    <view class='left-line'></view>
+    <view class='right-line'></view>
+  </view>
+  <button form-type="submit" class='btn'>提交</button>
+</form> 
+</view>  

@@ -1,0 +1,352 @@
+/* pages/recorderManager.wxss */
+@import"../../wxParse/wxParse.wxss";
+@import '../getuserinfo/getuserinfo';
+page{font-size: 24rpx;}
+.line{height: 20rpx;background: #f3f4f5;}
+.swiper-tab{  
+    width: 100%;  
+    text-align: center;  
+    padding: 0 0 30rpx;
+    background: #fff;
+}  
+.swiper-tab-list{ 
+  font-size: 24rpx;  
+  display: inline-block;  
+  width: 14%;  
+  color: #333;  
+  text-align: center;
+  position: relative;
+}  
+.swiper-tab-list:last-child{
+  border-right:none;  
+}
+.swiper-tab-list image{
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  margin: 0 auto 14rpx;
+}
+.on{ 
+  color: #3ECCB3;  
+} 
+.nav_line_right{
+  width: 32rpx;
+  height: 1px;
+  background: #c2c2c2;
+  position: absolute;
+  top:22%;
+  right: 0;
+} 
+.on .nav_line_right{
+  background: #3eccb3;
+} 
+.nav_line_left{
+  width: 32rpx;
+  height: 1px;
+  background: #c2c2c2;
+  position: absolute;
+  top:22%;
+  left: 0;
+}
+.on .nav_line_left{
+  background: #3eccb3;
+}   
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }  
+
+/* 抽题 */
+.steep_1{padding: 50rpx 30rpx 0;}
+.drawbox{width: 190rpx;height: 190rpx;border: 3px solid #3eccb3;border-radius: 50%;margin: 0 auto 50rpx;text-align: center;}
+.draw{width: 170rpx;height: 170rpx;border-radius: 50%;margin: 10rpx auto;
+background:#3ECCB3;text-align: center;line-height: 170rpx;color: #fff;font-size: 32rpx;
+}
+.rule-title{font-size: 30rpx;color: #333;text-align: center;line-height: 30rpx;padding-bottom: 30rpx;}
+.rule-con{font-size: 28rpx;color: #999;line-height: 38rpx;padding-bottom: 15rpx;}
+
+/* 准备 */
+.steep_2{padding: 30rpx 25rpx 300rpx;}
+.steep_2 .title{font-size: 26rpx;color: #666;text-align: center;padding: 0 0 30rpx;}
+.steep_2 .wxParse-p{display: inline;font-size: 30rpx;line-height:48rpx;text-align: justify; }
+.steep_2 .Q-t{display: inline-block;padding: 2rpx 8rpx;background: #3ECCB3;color: #fff;font-size: 24rpx;margin-right: 20rpx;}
+.Min,.Sec{  display: inline-block;width: 46rpx;height: 46rpx;background: #f86645;color: #fff;
+border-radius: 8rpx;line-height: 46rpx;font-size: 34rpx;text-align: center;}
+.fh{display: inline-block;font-size: 34rpx;color: #666;margin:0 20rpx;font-weight: bold;}
+.countDown_tip{font-size: 24rpx;color: #333;line-height: 24rpx;margin:20rpx 0 50rpx;}
+.ready .steep_2_B .countDown_tip{
+  font-size: 24rpx;
+  color: #333;
+  line-height: 24rpx;
+  margin:20rpx 0 30rpx;
+  
+}
+.ready .steep_2_B{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background: #f2f3f4;
+  padding: 30rpx 0 50rpx;
+}
+
+.steep_2 .steep_btn,.steep .steep_btn{width: 400rpx;height: 84rpx;background: #3eccb3;color: #fff;text-align: center;line-height: 84rpx;border-radius: 84rpx;margin: 50rpx auto 0;font-size: 34rpx;}
+.ready .steep_2_B .steep_btn{
+  margin: 30rpx auto 0;
+  width: 400rpx;height: 84rpx;background: #3eccb3;color: #fff;text-align: center;line-height: 84rpx;border-radius: 84rpx;font-size: 34rpx;
+}
+/* 叫号 */
+.steep_3{padding: 30rpx;}
+.steep_3 .tip{color: #999;line-height: 32rpx;}
+.card-item{
+  padding: 30rpx 0;
+  position: relative;
+}
+.card-item{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+.body-view{
+  float: right;
+}
+.jgh_question{
+  border: 1px solid #e5e5e5;
+  border-radius: 5rpx;
+  margin-bottom: 30rpx;
+}
+.jgh_question .jgh_title{
+  font-size: 32rpx;
+  color: #333;
+  padding: 30rpx;
+  line-height: 32rpx;
+}
+.jgh_box{
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-left: 30rpx;
+  border-top: 1px solid #d5dfdf;
+  position: relative;
+  background:#f0f5f4; 
+}
+.jgh_box image{width: 40rpx;height: 40rpx;vertical-align: middle;position: relative;z-index: 99;}
+.jgh_box text{position: absolute;right:30rpx;top: 0;color: #9bada9;z-index: 99;}
+.jgh_box .progress{position: absolute;left:0;top:0;height: 60rpx;background: #c2ebe3;}
+.steep_3 .next{width: 400rpx;height: 84rpx;line-height: 84rpx;text-align: center;color: #fff;font-size: 34rpx;background: #3eccb3;margin: 0 auto;border-radius: 84rpx;}
+.steep_3 .questionwords{float: right;color: #3eccb3;font-size: 24rpx;}
+
+/* 结构化答题 */
+.steep{padding: 60rpx 30rpx 50rpx;}
+.Q_no1{border: 1px solid #e5e5e5;border-radius: 10rpx;margin-bottom: 30rpx;}
+.Q_no1_title{height: 60rpx;line-height: 60rpx;font-size: 30rpx;color: #333;text-align: center;}
+.contnet{padding:30rpx 50rpx;background:#f3f3f5;}
+.contnet_h{padding:50rpx 50rpx;background:#f3f3f5;}
+.steep .steep_2_B{text-align: center;width: 100%;margin: 80rpx 0 0;}
+
+/* 试讲 */
+.steep_5 .title{font-size: 26rpx;color: #666;text-align: center;padding: 0 0 30rpx;}
+.steep_5 .wxParse-p{display: inline;font-size: 30rpx;}
+.steep_5 .Q-t{display: inline-block;padding: 2rpx 8rpx;background: #3ECCB3;color: #fff;font-size: 24rpx;margin-right: 20rpx;}
+.steep_5 .Q_no1{margin-top: 50rpx;}
+
+/* 答辩 */
+.question_db .reply_audio{width: 540rpx;background: #3eccb3;display:inline-block;
+}
+.question_db .reply_audio .reply_audio_duration{color: #fff;}
+.question_db .title{color: #333;font-size: 32rpx;}
+/* 出成绩 */
+.steep_7  .score_box{position: relative;
+}
+.score_box .score_title{height: 70rpx;line-height: 70rpx;background: #3eccb3;}
+.score_box .score_title text{display: inline-block;width: 50%;text-align: center;font-size: 32rpx;
+color: #fff;}
+.score_box .score_item1{
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #f9f9f9;
+
+}
+.score_box .score_item1 text,.score_box .score_item2 text{
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  color: #333;
+  font-size: 28rpx;
+}
+.score_box .score_item2{
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #eee;
+}
+.score_box .center-line{
+  height: 100%;
+  width: 2px;
+  background: #fff;
+  position: absolute;
+  top:0;
+  left:50%;
+  margin-left: -1px;
+}
+
+.score_btn{
+  position: absolute;
+  bottom: 50rpx;
+  text-align: center;
+  width: 100%;
+}
+.score_btn_x{
+  bottom: 68rpx;
+}
+.score_btn button{
+  width: 500rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0 auto 20rpx;
+  border-radius: 8rpx;
+  color: #fff;
+  font-size: 32rpx;
+}
+.score_btn button::after{
+  border: none;
+  content: '';
+}
+.friends{
+  background: #fa9f56;
+}
+.teacher{
+  background: #f7694d;
+}
+.endExam{
+  color: #3eccb3;
+  font-size: 30rpx;
+  margin-top: 30rpx;
+}
+.mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, .6)
+}
+.copycontent{
+  width: 570rpx;
+  background: #fff;
+  border-radius: 8rpx;
+  position: fixed;
+  left:50rpx;
+  top:30%;
+  padding: 50rpx 40rpx;
+}
+.copy-t{
+  font-size:30rpx;
+  color: #333;
+  padding-bottom: 50rpx;
+  text-align: center;
+
+}
+.copy-c{
+  border:1px solid #e5e5e5;
+  padding: 50rpx 30rpx 40rpx;
+  margin-bottom: 50rpx;
+}
+.copy-tip{
+  font-size: 30rpx;
+  color: #999;
+  line-height: 30rpx;
+  padding-bottom: 20rpx;
+  display: block;
+}
+.copy-wxcode{
+  display: inline-block;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding-left: 30rpx;
+  color: #333;
+  font-size: 30rpx;
+  width: 330rpx;
+  border:1px solid #e5e5e5;
+  margin-right: 20rpx;
+}
+.copy-btn{
+  width: 120rpx;
+  background: #f97c4b;
+  color: #fff;
+  line-height: 70rpx;
+  height: 70rpx;
+  text-align: center;
+  font-size: 30rpx;
+  float: right;
+}
+.KF{
+  background: #3eccb3;
+  color: #fff;  
+}
+.KF::after{
+  border:none;
+}
+.close{
+  width: 18rpx;
+  height: 18rpx;
+  position: absolute;
+  right:20rpx;
+  top:20rpx;
+
+}
+.JGH{
+  height: 65%;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 690rpx;
+  overflow-y: scroll;
+  border-radius: 14rpx 14rpx 0 0;
+  padding: 30rpx;
+}
+.JGH .close{right: 30rpx;}
+.JGH .wxParse-inline{font-size: 28rpx;line-height: 40rpx;}
+.mask_JGH_title{font-size: 32rpx;color: #333;line-height: 32rpx;padding-bottom: 30rpx;text-align: center;}
+/*音频  */
+.start{
+  width: 140rpx;
+  height: 140rpx;
+  margin: 222rpx auto 70rpx;
+  display: block;
+}
+
+.audio{padding-top: .3rem;background: #fff;}
+.audio_box{margin: 0 auto 30rpx;background: #fff;
+padding: 15rpx 30rpx;vertical-align: center;border-radius: 20rpx;height: 80rpx;line-height: 80rpx;}
+.audio_box .wave{width: 255rpx;height: 30rpx;display: block;margin-left: 30rpx;float: left;
+margin-top: 25rpx;} 
+.recording{width: 90rpx;height: 90rpx;border: 1px solid #e5e5e5;background: #fff;
+box-shadow: 2 6 6 2 rgba(136, 167, 161, .2);border-radius:50%;text-align: center;line-height: 90rpx; margin: 0 auto;}
+.start_audio{width: 34rpx;height: 60rpx;display: block;margin: 15rpx auto;} 
+.audio_box .duration{font-size: 30rpx;color: #666;line-height: 80rpx;float:left;}
+.complete_audio{float: right;width: 92rpx;height: 44rpx;background: #f65050;color: #fff;border-radius: 8rpx;line-height: 44rpx;margin-top: 15rpx;text-align: center;}
+.play_audio{width: 630rpx;margin: 0 auto 30rpx;border:1rpx solid #e5e5e5;background: #fbfbfb;
+padding: 15rpx 30rpx;vertical-align: center;border-radius: 20rpx;height: 80rpx;line-height: 80rpx;
+position: relative;}
+.play_audio_left{width: 60rpx;height: 60rpx;float: left;margin-top: 10rpx;}
+.play_audio_left image{width: 100%;height: 100%;}
+.play_audio_right{margin-left: 105rpx;position: relative;top:-10rpx;}
+.play_time{position: relative;top:-20rpx;font-size: 26rpx;color: #666;left:25rpx;}
+.time_schedule{float:left;line-height: 30rpx;}
+.play_dura{float:right;margin-right: 65rpx;line-height: 30rpx;}
+.content .up-btn .btn{width: 120rpx;height: 120rpx;margin-right: 50rpx;display: inline-block;}
+
+/* 播放录音 */
+
+.reply_audio{width: 525rpx;height: 60rpx;line-height: 60rpx;padding: 0 30rpx;background: #fff;
+border-radius: 50rpx;margin-bottom:30rpx;}
+.reply_audio_btn{width: 25rpx;height: 34rpx;position: relative;bottom:-5rpx;
+}
+.reply_audio .reply_audio_duration{float: right;color: #666;font-size:26rpx;}
+
+
+.login{
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 670rpx;
+  background: #fff;
+}

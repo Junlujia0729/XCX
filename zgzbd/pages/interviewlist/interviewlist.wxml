@@ -1,0 +1,47 @@
+<!--pages/Interviewlist/Interviewlist.wxml-->
+
+<view class='list'>
+  <view class='list-item' wx:if="{{datas.length > 0}}" wx:for="{{datas}}" wx:item="item" wx:key="key">
+    <navigator class='top' url='../interviewdetail/interviewdetail?id={{item.id}}' hover-class="none">
+      <view class='left'>
+        <view class='title'>{{item.title}}</view>  
+        
+        <text>{{item.begintime}}</text>
+      </view>
+      <!-- <view class='right' wx:if="{{item.state == 1}}">
+        <view>老师评分</view>
+        <view class='score'>{{item.score}}分</view>
+      </view>
+      <view class='right' wx:if="{{item.state == 0}}">
+        <text class='score_name'>老师未评</text>
+      </view> -->
+    </navigator>
+    <view class='bottom'>
+      <navigator url='../interviewdetail/interviewdetail?id={{item.id}}' hover-class="none">查看详情</navigator>
+      <!-- <text wx:if="{{item.is_pay == 0}}" bindtap='askteacher'>邀请老师打分</text> -->
+      <navigator url='../friendlist/friendlist?id={{item.id}}' hover-class="none">查看好友评分</navigator>
+    </view>
+  </view>
+  <view wx:if="{{datas.length == 0}}" class='tip'>
+    您还没有测试记录哦，点击开始面试测试吧！
+  </view>
+</view>
+<view class="{{isIphoneX ? 'start-btn iphonex-start' : 'start-btn'}}" bindtap='start'>
+  开始面试测试
+</view>
+
+<!-- 打分 -->
+<view class='mask' wx:if="{{maskshow}}">
+  <view class='copycontent'>
+    <view class='copy-t'>加老师微信，即可获得面试评分服务</view>
+    <view class='copy-c'>
+      <text class='copy-tip'>复制以下内容去回复</text>
+      <view >
+        <text class='copy-wxcode'>{{wxcode}}</text>
+        <text class='copy-btn' bindtap='copy'>复制</text>
+      </view>
+    </view>
+    <button open-type="contact" show-message-card="true" session-from="ZGZKSBD" class='KF'>去回复</button>
+    <image src='http://imgs.52jiaoshi.com/1545209130.png' class='close' bindtap='close' ></image>
+  </view>
+</view>

@@ -1,0 +1,49 @@
+<!--pages/draw/draw.wxml-->
+<view class="loading {{showsection1 ? 'hideloading' : ''}}" style="width:{{clientWidth+'px'}};height:{{clientHeight +'px'}};"></view>
+<view class='section1' style="width:{{clientWidth+'px'}};height:{{clientHeight-1 +'px'}};" wx:if="{{!showsection2}}">
+  <image class='tipwords' src='http://imgs.52jiaoshi.com/1540536855.gif' mode="widthFix"></image>
+  <image class='fish' src='http://imgs.52jiaoshi.com/1540536901.png' mode="widthFix" animation="{{animationfish}}"></image>
+  <image class='btn' src='http://imgs.52jiaoshi.com/1540538118.png' mode="widthFix" bindtap='startdraw'></image>
+</view>
+<view class='section2' style="width:{{clientWidth+'px'}};height:{{clientHeight-1 +'px'}};" wx:if="{{showsection2}}">
+    <view class='crads'>
+      <view class='card-F'>
+        <view class='card-item' wx:for="{{items}}" wx:for-item="item" wx:key="key">
+            <image src='{{item.smallimg}}' 
+            bindtap="ScaleBig{{index+1}}" data-id='{{index}}' animation="{{animation1}}"  class='bigimg bigimg{{index}}' wx:if="{{index == 0}}" ></image>
+            <image src='{{item.smallimg}}' 
+            bindtap="ScaleBig{{index+1}}" data-id='{{index}}' animation="{{animation2}}"  class='bigimg bigimg{{index}}' wx:if="{{index == 1}}" ></image>
+            <image src='{{item.smallimg}}' 
+            bindtap="ScaleBig{{index+1}}" data-id='{{index}}' animation="{{animation3}}"  class='bigimg bigimg{{index}}' wx:if="{{index == 2}}" ></image>
+            <image src='{{item.smallimg}}' 
+            bindtap="ScaleBig{{index+1}}" data-id='{{index}}' animation="{{animation4}}"  class='bigimg bigimg{{index}}' wx:if="{{index == 3}}" ></image>
+            <image src='{{item.smallimg}}' data-id='{{index}}' class='bigimg bigimg{{index}}' wx:if="{{index == 4}}" ></image>
+            <image src='{{item.smallimg}}' 
+            bindtap="ScaleBig{{index+1}}" data-id='{{index}}' animation="{{animation6}}"  class='bigimg bigimg{{index}}' wx:if="{{index == 5}}" ></image>
+            <image src='{{item.smallimg}}' 
+            bindtap="ScaleBig{{index+1}}" data-id='{{index}}' animation="{{animation7}}"  class='bigimg bigimg{{index}}' wx:if="{{index == 6}}" ></image>
+            <image src='{{item.smallimg}}' 
+            bindtap="ScaleBig{{index+1}}" data-id='{{index}}' animation="{{animation8}}"  class='bigimg bigimg{{index}}' wx:if="{{index == 7}}" ></image>
+            <image src='{{item.smallimg}}' 
+            bindtap="ScaleBig{{index+1}}" data-id='{{index}}' animation="{{animation9}}"  class='bigimg bigimg{{index}}' wx:if="{{index == 8}}" ></image>
+        </view>
+        <!-- <view class='card-item'>
+          <view class='image-box'> 
+            <image src='http://imgs.52jiaoshi.com/15350782965b7f6f98e2913.jpg' bindtap="{{maskshow ? '' :'ScaleBig2'}}" data-id='1'></image>
+          <image src='http://imgs.52jiaoshi.com/1540521277.png' animation="{{animation2}}"  class='bigimg bigimg2' data-id='1'></image>
+          </view>
+        </view> -->
+      </view>
+    </view>
+  </view>
+<view class='mask' style="width:{{clientWidth+'px'}};height:{{clientHeight +'px'}};z-index:{{maskZindex}};" >
+  <view class='big-card'>
+    <image src='{{imgurl}}' mode='widthFix' class='bag' bindload="imgload" bindtap="previewImage" data-src="{{imgurl}}"></image>
+  </view>
+  <view class='btns'>
+    <button open-type='share' class='share'>分享给好友</button>
+    <view class='saveimg' bindtap='saveimg'>保存图片</view>
+  </view>
+</view>
+
+

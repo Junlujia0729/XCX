@@ -1,0 +1,78 @@
+/* pages/home/home.wxss */
+page{
+  font-size: 24rpx;
+  background: #f2f3f4; 
+}
+.guide,guide2{
+  height: 100%;
+  background: #f2f3f4;
+  padding: 100rpx 10rpx;
+}
+.title{text-align: center;color: #999;font-size: 30rpx;margin-bottom: 50rpx;}
+.title .line{
+  width: 110rpx;
+  height: 1px;
+  background: #d2d2d2;
+  display: inline-block;
+  position: relative;
+  top:-5rpx;
+}
+.title .title-tip{
+  display: inline-block;
+  margin: 0 30rpx;
+}
+.examtype{
+  margin-bottom: 80rpx;
+}
+.examtype .type-item{
+  display: inline-block;
+  width: 140rpx;
+  height: 82rpx;
+  background: #fff;
+  color: #333;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 82rpx;
+  border-radius: 10rpx;
+  border:1px solid #e2e2e2;
+  margin: 0 19rpx 20rpx 19rpx;
+}
+.examtype .type-item-active{
+  background: #3eccb3;
+  border:none;
+  color: #fff;
+}
+.examtype .type-item-none{
+  background: #e5e5e5;
+  font-size: #aaa;
+}
+.g2{padding: 30rpx 0 50rpx;font-size: 26rpx;color: #999;text-align: center}
+.g2 .g2_t{
+  color: #3eccb3;
+}
+
+.choose-btn{
+  width: 690rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #d5d5d5;
+  text-align: center;
+  font-size: 36rpx;
+  color: #aaa;
+  margin: 0 auto;
+  border-radius: 8rpx;  
+}
+.choose-btn-activity{
+  width: 690rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #3eccb3;
+  text-align: center;
+  font-size: 36rpx;
+  color: #fff;
+  margin: 0 auto;
+  border-radius: 8rpx; 
+}
+
+
+

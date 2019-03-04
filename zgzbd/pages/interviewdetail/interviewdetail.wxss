@@ -1,0 +1,290 @@
+/* pages/interviewscore.wxss */
+@import '../getuserinfo/getuserinfo';
+page{font-size: 24rpx;}
+.header{
+  
+  background: #f85050;
+  color: #fff;
+}
+.score-box{
+  width: 220rpx;
+  height: 90rpx;
+  background: url('http://imgs.52jiaoshi.com/1545213585.png') no-repeat;
+  background-size:100% 100%;
+  margin: 0 auto 50rpx;
+  text-align: center;
+  padding-top: 80rpx; 
+}
+.score-box .score{
+  font-size: 36rpx;
+  font-weight: bold;
+  line-height: 36rpx;
+  padding-bottom: 20rpx;
+}
+.score-box .score-table{
+  display: inline-block;
+  padding: 0 8rpx;
+  height: 34rpx;
+  line-height: 36rpx;
+  border:1px solid #fff;
+  border-radius: 4rpx;
+  font-size: 22rpx;
+}
+.tip{
+  font-size: 26rpx;
+  line-height: 40rpx;
+  padding-bottom: 50rpx;
+}
+.score-btn{
+  text-align: center
+}
+.score-btn button{
+  display: inline-block;
+  padding: 0 30rpx;
+  height: 70rpx;
+    line-height: 70rpx; 
+  background: none;
+  border-radius: 70rpx;
+}
+.score-btn button::after{
+  border: none;
+}
+.score-btn .friend{
+  border: 1px solid #fedede;
+  font-size: 32rpx;
+  color: #fedede;
+  margin-right:50rpx; 
+  line-height: 68rpx; 
+}
+.score-btn .teacher{
+  background: #fff;
+  font-size: 32rpx;
+  color: #fe4848;
+}
+.header image{
+  width: 100%;
+  height: 82rpx;
+  display: block;
+}
+.line{
+  height: 20rpx;
+  background: #f3f4f5;
+}
+.friendslist{
+  text-align: center;
+  font-size: 24rpx;
+  color: #fedede;
+  text-decoration: underline;
+  padding: 30rpx 0;
+}
+.record{
+  padding: 30rpx;
+}
+.record-title{
+  font-size: 30rpx;
+  color: 3333;
+  padding-bottom: 30rpx;
+}
+.question_palybtn{
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+  margin-right: 14rpx;
+  position: relative;
+  margin-bottom: -8rpx;
+}
+.question_type{
+  font-size: 30rpx;
+  color: #333;
+}
+.questionwords{float: right;color: #3eccb3;font-size: 24rpx;}
+.Q_no1{border: 1px solid #e5e5e5;border-radius: 10rpx;margin-bottom: 50rpx;}
+.Q_no1_title{padding:24rpx 30rpx;font-size: 30rpx;color: #333;}
+.contnet{padding:20rpx 50rpx 30rpx;background:#f0f5f4;}
+.reply_audio{width: 525rpx;height: 60rpx;line-height: 60rpx;padding: 0 30rpx;background: #fff;
+border-radius: 50rpx;margin-top:20rpx;}
+.answers-title{font-size: 26rpx;line-height: 26rpx;color: #7d8c89;text-align: center;}
+.reply_audio_btn{width: 25rpx;height: 34rpx;position: relative;bottom:-5rpx;
+}
+.reply_audio .reply_audio_duration{float: right;color: #666;font-size:26rpx;}
+.wxParse-p{font-size: 30rpx;}
+.Q-t{display: inline-block;padding: 2rpx 8rpx;background: #3ECCB3;color: #fff;font-size: 24rpx;margin-right: 20rpx;}
+
+.box{background: #f2f3f4;}
+.top{height: 150rpx;background: #3ECCB3;}
+.container_1{
+  margin:0 auto 50rpx;
+  position: relative;
+  padding:50rpx 15rpx 50rpx;
+  background: #fff;
+  box-shadow:2rpx 6rpx 6rpx rgba(0, 0, 0, .05);
+}
+.container{
+  width: 690rpx;
+  border-radius: 10rpx;
+  margin:0 auto 50rpx;
+  position: relative;
+  top:-50rpx;
+  padding: 70rpx 15rpx 50rpx;
+  background: #fff;
+  box-shadow:2rpx 6rpx 6rpx rgba(0, 0, 0, .05);
+}
+.header_img{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  top:-50rpx;
+  left:50%;
+  margin-left:-50rpx;
+  border-radius: 50%;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+}
+.header_img image{width: 100%;height: 100%;}
+.nickname{
+  font-size: 30rpx;
+  color: #333;
+  line-height: 30rpx;
+  padding-bottom:50rpx;
+  text-align: center; 
+}
+.btns,.btns-share{
+  display: flex;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+.btns-share{
+  position: fixed;
+  left:0;
+  bottom: 0;
+  width: 100%;
+}
+.btns navigator{
+  flex: 1;
+  text-align: center;
+  background: #fff;
+  font-size: 30rpx;
+  color: #333;
+}
+.btns-share button{
+  flex: 1;
+  text-align: center;
+  font-size: 30rpx;
+  background: #f97c4b;
+  color: #fff;
+  line-height: 88rpx;
+  border: none;
+  border-radius: 0;
+}
+.btns-share button::after{
+  border: none;
+}
+.btns navigator:last-child{
+  background: #f97c4b;
+  color: #fff;
+}
+.Q_no1 .wxParse-inline{display: inline;}
+.mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, .6)
+}
+.copycontent{
+  width: 570rpx;
+  background: #fff;
+  border-radius: 8rpx;
+  position: fixed;
+  left:50rpx;
+  top:30%;
+  padding: 50rpx 40rpx;
+}
+.copy-t{
+  font-size:30rpx;
+  color: #333;
+  padding-bottom: 50rpx;
+  text-align: center;
+
+}
+.copy-c{
+  border:1px solid #e5e5e5;
+  padding: 50rpx 30rpx 40rpx;
+  margin-bottom: 50rpx;
+}
+.copy-tip{
+  font-size: 30rpx;
+  color: #999;
+  line-height: 30rpx;
+  padding-bottom: 20rpx;
+  display: block;
+}
+.copy-wxcode{
+  display: inline-block;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding-left: 30rpx;
+  color: #333;
+  font-size: 30rpx;
+  width: 330rpx;
+  border:1px solid #e5e5e5;
+  margin-right: 20rpx;
+}
+.copy-btn{
+  width: 120rpx;
+  background: #f97c4b;
+  color: #fff;
+  line-height: 70rpx;
+  height: 70rpx;
+  text-align: center;
+  font-size: 30rpx;
+  float: right;
+}
+.KF{
+  background: #3eccb3;
+  color: #fff;  
+}
+.KF::after{
+  border:none;
+}
+.close{
+  width: 18rpx;
+  height: 18rpx;
+  position: absolute;
+  right:20rpx;
+  top:20rpx;
+
+}
+.JGH{
+  height: 65%;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 690rpx;
+  overflow-y: scroll;
+  border-radius: 14rpx 14rpx 0 0;
+  padding: 30rpx;
+}
+.JGH .close{
+  right: 30rpx;width: 18rpx;
+  height: 18rpx;
+  position: absolute;
+  top:20rpx;}
+.JGH .wxParse-inline{font-size: 28rpx;line-height: 40rpx;}
+.mask_JGH_title{font-size: 32rpx;color: #333;line-height: 32rpx;padding-bottom: 30rpx;text-align: center;}
+.wxParse-p image{
+  width: 100%;
+  height: auto;
+}
+.wxParse-img{
+  width: 100% !important;
+  height: auto;
+}
+.login{
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 670rpx;
+  background: #fff;
+}

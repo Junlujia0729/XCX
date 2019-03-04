@@ -1,0 +1,320 @@
+<!--pages/interviewscore.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<!-- 查阅自己答题记录 -->
+<!-- <view>
+  <view class='header'>
+    <view style='padding: 50rpx 30rpx 0;'>
+      <view class='score-box'>
+        <view class='score' wx:if="{{score}}">{{score}}分</view>
+        <text class='score-table' wx:if="{{score}}">老师评分</text>
+        <view class='score' wx:if="{{!score}}">暂未评分</view>
+        <text class='score-table' wx:if="{{!score}}">待评分</text>
+      </view>
+      <view class='tip'>
+        邀请专业的老师打分，查漏补缺，及时掌握面试要点，更好的通过面试考试。52和你一次就好！
+      </view>
+      <view class='score-btn' wx:if="{{!score}}">
+        <button class='friend' open-type='share'>邀请好友评分</button>
+        <button class='teacher' bindtap='askteacher' >请老师打分</button>
+      </view> 
+      <view class='score-btn' wx:else>
+        <button class='friend' open-type='share' style='margin-right:0'>邀请好友评分</button>
+      </view> 
+      <navigator class='friendslist' url='../friendlist/friendlist?id={{id}}' hover-class="none">好友评分列表</navigator>
+    </view>
+    <image src='http://imgs.52jiaoshi.com/1545214719.gif'></image>
+  </view>
+  <view class='line'></view>
+  <view class='record'>
+    <view class='record-title'>您的面试记录</view>
+    
+    <view class='Q_no1'>
+      <view class='Q_no1_title'>
+      <image 
+        src='{{audio_JGH[0].play_img}}' 
+        class='question_palybtn'
+        catchtap='audioPlay'
+        data-audio="{{audio_JGH[0].audio_url}}"
+        data-index="0"
+        data-duration="{{audio_JGH[0].duration}}"
+        data-playstate="{{audio_JGH[0].playstate}}"
+        data-qindex="1"
+      ></image>      
+      <text class='question_type'>结构化题目1</text>
+      <text bindtap='read' data-index="1" class='questionwords'>查看文字题目</text>
+      </view>
+      <view class="contnet">
+        <view class='answers-title'>您的回答</view>
+        <view class='reply_audio' wx:for="{{audio_JGH}}" wx:key="key" wx:item-for="item" wx:if="{{index > 0}}"
+              catchtap='audioPlay'
+              data-audio="{{item.audio_url}}"
+              data-index="{{index}}"
+              data-duration="{{item.duration}}"
+              data-playstate="{{item.playstate}}"
+              data-qindex="1"
+              >
+          <image src='{{item.play_img}}' class='reply_audio_btn'>
+          </image>
+          <text class='reply_audio_duration'>{{item.new_duration}}</text>
+        </view>
+      </view>
+    </view>
+
+    
+    <view class='Q_no1'>
+      <view class='Q_no1_title'>
+      <image 
+        src='{{audio_JGH2[0].play_img}}' 
+        class='question_palybtn'
+        catchtap='audioPlay'
+        data-audio="{{audio_JGH2[0].audio_url}}"
+        data-index="0"
+        data-duration="{{audio_JGH2[0].duration}}"
+        data-playstate="{{audio_JGH2[0].playstate}}"
+        data-qindex="2"
+      ></image>     
+      <text class='question_type'>结构化题目2</text>
+      <text bindtap='read' data-index="2" class='questionwords'>查看文字题目</text>
+      </view>
+      <view class="contnet">
+        <view class='answers-title'>您的回答</view>
+        <view class='reply_audio' wx:for="{{audio_JGH2}}" wx:key="key" wx:item-for="item" wx:if="{{index > 0}}"
+              catchtap='audioPlay'
+              data-audio="{{item.audio_url}}"
+              data-index="{{index}}"
+              data-duration="{{item.duration}}"
+              data-playstate="{{item.playstate}}"
+              data-qindex="2"
+              >
+          <image src='{{item.play_img}}' class='reply_audio_btn'>
+          </image>
+          <text class='reply_audio_duration'>{{item.new_duration}}</text>
+        </view>
+      </view>
+    </view>
+
+    
+    <view class='Q_no1'>
+      <view class='Q_no1_title'>    
+      
+      <template is="wxParse" data="{{wxParseData:question_sj.nodes}}" />  
+      </view>
+      <view class="contnet">
+        <view class='answers-title'>您的回答</view>
+        <view class='reply_audio' wx:for="{{audio_SJ}}" wx:key="key" wx:item-for="item" wx:if="{{index > 0}}"
+              catchtap='audioPlay'
+              data-audio="{{item.audio_url}}"
+              data-index="{{index}}"
+              data-duration="{{item.duration}}"
+              data-playstate="{{item.playstate}}"
+              data-qindex="3"
+              >
+          <image src='{{item.play_img}}' class='reply_audio_btn'>
+          </image>
+          <text class='reply_audio_duration'>{{item.new_duration}}</text>
+        </view>
+      </view>
+    </view>
+
+    
+    <view class='Q_no1'>
+      <view class='Q_no1_title'>
+      <image 
+        src='{{audio_DB[0].play_img}}' 
+        class='question_palybtn'
+        catchtap='audioPlay'
+        data-audio="{{audio_DB[0].audio_url}}"
+        data-index="0"
+        data-duration="{{audio_DB[0].duration}}"
+        data-playstate="{{audio_DB[0].playstate}}"
+        data-qindex="4"
+      ></image>       
+      <text class='question_type'>答辩题目</text>
+      <text class='questionwords'>{{audio_DB[0].new_duration}}</text>
+      </view>
+      <view class="contnet">
+        <view class='answers-title'>您的回答</view>
+        <view class='reply_audio' wx:for="{{audio_DB}}" wx:key="key" wx:item-for="item" wx:if="{{index > 0}}"
+              catchtap='audioPlay'
+              data-audio="{{item.audio_url}}"
+              data-index="{{index}}"
+              data-duration="{{item.duration}}"
+              data-playstate="{{item.playstate}}"
+              data-qindex="4"
+              >
+          <image src='{{item.play_img}}' class='reply_audio_btn'>
+          </image>
+          <text class='reply_audio_duration'>{{item.new_duration}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view> -->
+<view class='box'>
+  <view class='top' wx:if="{{identity == 1}}"></view>
+  <view class=" {{identity == 1 ? 'container' :'container_1'}}">
+    <view wx:if="{{identity == 1}}">
+      <view class='header_img'><image src='{{header_img}}'></image></view>
+      <view class='nickname'>{{nickname}}的面试记录</view>
+    </view>
+    <view class='record' style='padding:0'>
+    <view class='record-title'>您的面试记录</view>
+    <!-- 结构化1 -->
+    <view class='Q_no1'>
+      <view class='Q_no1_title'>
+      <image 
+        src='{{audio_JGH[0].play_img}}' 
+        class='question_palybtn'
+        catchtap='audioPlay'
+        data-audio="{{audio_JGH[0].audio_url}}"
+        data-index="0"
+        data-duration="{{audio_JGH[0].duration}}"
+        data-playstate="{{audio_JGH[0].playstate}}"
+        data-qindex="1"
+      ></image>      
+      <text class='question_type'>结构化题目1</text>
+      <text bindtap='read' data-index="1" class='questionwords'>查看文字题目</text>
+      </view>
+      <view class="contnet">
+        <view class='answers-title'>您的回答</view>
+        <view class='reply_audio' wx:for="{{audio_JGH}}" wx:key="key" wx:item-for="item" wx:if="{{index > 0}}"
+              catchtap='audioPlay'
+              data-audio="{{item.audio_url}}"
+              data-index="{{index}}"
+              data-duration="{{item.duration}}"
+              data-playstate="{{item.playstate}}"
+              data-qindex="1"
+              >
+          <image src='{{item.play_img}}' class='reply_audio_btn'>
+          </image>
+          <text class='reply_audio_duration'>{{item.new_duration}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 结构化2 -->
+    <view class='Q_no1'>
+      <view class='Q_no1_title'>
+      <image 
+        src='{{audio_JGH2[0].play_img}}' 
+        class='question_palybtn'
+        catchtap='audioPlay'
+        data-audio="{{audio_JGH2[0].audio_url}}"
+        data-index="0"
+        data-duration="{{audio_JGH2[0].duration}}"
+        data-playstate="{{audio_JGH2[0].playstate}}"
+        data-qindex="2"
+      ></image>     
+      <text class='question_type'>结构化题目2</text>
+      <text bindtap='read' data-index="2" class='questionwords'>查看文字题目</text>
+      </view>
+      <view class="contnet">
+        <view class='answers-title'>您的回答</view>
+        <view class='reply_audio' wx:for="{{audio_JGH2}}" wx:key="key" wx:item-for="item" wx:if="{{index > 0}}"
+              catchtap='audioPlay'
+              data-audio="{{item.audio_url}}"
+              data-index="{{index}}"
+              data-duration="{{item.duration}}"
+              data-playstate="{{item.playstate}}"
+              data-qindex="2"
+              >
+          <image src='{{item.play_img}}' class='reply_audio_btn'>
+          </image>
+          <text class='reply_audio_duration'>{{item.new_duration}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 试讲 -->
+    <view class='Q_no1'>
+      <view class='Q_no1_title'>    
+      <text class='Q-t'>题目</text>
+      <template is="wxParse" data="{{wxParseData:question_sj.nodes}}" />  
+      </view>
+      <view class="contnet">
+        <view class='answers-title'>您的回答</view>
+        <view class='reply_audio' wx:for="{{audio_SJ}}" wx:key="key" wx:item-for="item" wx:if="{{index > 0}}"
+              catchtap='audioPlay'
+              data-audio="{{item.audio_url}}"
+              data-index="{{index}}"
+              data-duration="{{item.duration}}"
+              data-playstate="{{item.playstate}}"
+              data-qindex="3"
+              >
+          <image src='{{item.play_img}}' class='reply_audio_btn'>
+          </image>
+          <text class='reply_audio_duration'>{{item.new_duration}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 答辩 -->
+    <view class='Q_no1'>
+      <view class='Q_no1_title'>
+      <image 
+        src='{{audio_DB[0].play_img}}' 
+        class='question_palybtn'
+        catchtap='audioPlay'
+        data-audio="{{audio_DB[0].audio_url}}"
+        data-index="0"
+        data-duration="{{audio_DB[0].duration}}"
+        data-playstate="{{audio_DB[0].playstate}}"
+        data-qindex="4"
+      ></image>       
+      <text class='question_type'>答辩题目</text>
+      <text class='questionwords'>{{audio_DB[0].new_duration}}</text>
+      </view>
+      <view class="contnet">
+        <view class='answers-title'>您的回答</view>
+        <view class='reply_audio' wx:for="{{audio_DB}}" wx:key="key" wx:item-for="item" wx:if="{{index > 0}}"
+              catchtap='audioPlay'
+              data-audio="{{item.audio_url}}"
+              data-index="{{index}}"
+              data-duration="{{item.duration}}"
+              data-playstate="{{item.playstate}}"
+              data-qindex="4"
+              >
+          <image src='{{item.play_img}}' class='reply_audio_btn'>
+          </image>
+          <text class='reply_audio_duration'>{{item.new_duration}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  </view>
+  <view class='btns' wx:if="{{identity == 1}}">
+    <navigator url='../interviewscoring/interviewscoring?id={{id}}' hover-class="none">我来帮TA打分</navigator>
+    <navigator url='../interviewlist/interviewlist' hover-class="none">我也要测试</navigator>
+  </view>
+  <view class='btns-share' wx:else>
+    <button wx:if="{{!canshare}}" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">获取昵称，分享给好友</button>
+    <button open-type='share' wx:else>邀请好友打分</button>
+  </view>
+</view>
+
+<!-- 结构化题目 -->
+<view class='mask' wx:if="{{maskshow_JGH}}">
+  <view class='JGH'>
+    <view class='mask_JGH_title' wx:if="{{JGH_1}}">结构化题目1</view>
+    <template is="wxParse" data="{{wxParseData:question_jgh1.nodes}}" wx:if="{{JGH_1}}"/> 
+    <view class='mask_JGH_title' wx:if="{{JGH_2}}">结构化题目2</view>
+    <template is="wxParse" data="{{wxParseData:question_jgh2.nodes}}" wx:if="{{JGH_2}}"/> 
+    <image src='http://imgs.52jiaoshi.com/1545209130.png' class='close' bindtap='close_jgh'></image>
+  </view>
+</view>
+
+<!-- 打分 -->
+<view class='mask' wx:if="{{maskshow}}">
+  <view class='copycontent'>
+    <view class='copy-t'>加老师微信，即可获得面试评分服务</view>
+    <view class='copy-c'>
+      <text class='copy-tip'>复制以下内容去回复</text>
+      <view >
+        <text class='copy-wxcode'>{{wxcode}}</text>
+        <text class='copy-btn' bindtap='copy'>复制</text>
+      </view>
+    </view>
+    <button open-type="contact" show-message-card="true" session-from="ZGZKSBD" class='KF'>去回复</button>
+    <image src='http://imgs.52jiaoshi.com/1545209130.png' class='close' bindtap='close' ></image>
+  </view>
+</view>
